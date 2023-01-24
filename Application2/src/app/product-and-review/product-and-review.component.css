@@ -1,0 +1,18 @@
+#products {
+    width: 22%;
+}
+
+ngb-rating {
+    color: #ffc000;
+    font-size: 30px;
+}
+
+#main {
+    background-color: #1b263b;
+    overflow:auto;
+}
+
+#scroller {
+    overflow: auto;
+    height: 300px;
+}

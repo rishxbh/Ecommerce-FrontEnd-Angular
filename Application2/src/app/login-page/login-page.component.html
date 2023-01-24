@@ -1,0 +1,31 @@
+<div class="vh-100" style="background-color: #1b263b;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5">Sign in</h3>
+                        <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+                            <div class="form-outline mb-4">
+                                <input type="email" id="typeEmailX-2" class="form-control form-control-lg"
+                                    formControlName="userName" placeholder="Username" required = "true">
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="password" id="typePasswordX-2" class="form-control form-control-lg"
+                                    formControlName="userPassword" placeholder="Password" required = "true">
+                            </div>
+
+                            <button class="btn btn-primary" type="submit">Login</button>
+                        </form>
+                        <div class="form-check d-flex justify-content-start mb-4 mt-2">
+                            <p>New User? <a routerLink="/signUp" style="text-decoration: none; font-weight: bold;"> Create new account</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

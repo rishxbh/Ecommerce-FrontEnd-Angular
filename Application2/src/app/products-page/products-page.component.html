@@ -1,0 +1,35 @@
+<div class="min-vh-100" style="background-color: #495057;">
+    <div class="pt-2 d-flex justify-content-evenly">
+        <div>
+            <form [formGroup]="form" (ngSubmit)="getQueryProduct()">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="text" id="form1" class="form-control" placeholder="Search Product" formControlName="query"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <button (click)="allProducts()" class="btn btn-light">View all products</button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-start flex-wrap">
+        <div id="products" *ngFor="let data of list"
+            class="p-2 m-3 border border-secondary rounded-5 d-flex flex-column align-items-center justify-content-center"
+            style="background-color: #f0efeb; min-width: 20%;">
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="{{data.imageLink}}" alt="" srcset="" width="70%" class="rounded-5">
+            </div>
+            <div>
+                <h6>{{data.brand}}</h6>
+                <p>{{data.productName}}</p>
+            </div>
+            <div>
+                <a routerLink="reviews/{{data.productCode}}">Check Reviews >></a>
+            </div>
+        </div>
+    </div>
+</div>
